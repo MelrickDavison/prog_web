@@ -32,11 +32,6 @@ app.post('/form', (req, res) => {
  console.log(estudante)
 });
 
-app.post('/salvar/idade', (req, res) => {
-  let idade = req.body.idade
-  res.send(`Tenho ${idade} anos`);
-});
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`); 
 });
