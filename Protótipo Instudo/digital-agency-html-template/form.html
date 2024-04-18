@@ -84,13 +84,15 @@
         <div class="container">
           <div class="row">
             <div class="col 8">
+              <form method="post" action="http://localhost:3000/form">
+          
               <div class="col-md">
                 <label for="validationDefault01"class="form-label">Nome</label>
-                <input type="text" class="form-control" id="inptNome" required>
+                <input type="text" class="form-control" name="nome" id="inptNome" required>
               </div>
               <div class="col-md">
                 <label for="validationDefault02" class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="inptSobrenome" required>
+                <input type="text" class="form-control" name='sobrenome' id="inptSobrenome" required>
               </div>
               <div class="col-md">
                 <label for="validationDefaultUsername" class="form-label">Usuário</label>
@@ -101,11 +103,11 @@
               </div>
               <div class="col-md-6">
                 <label for="validationDefault03" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="inptCidade" required>
+                <input type="text" class="form-control" name="cidade" id="inptCidade" required>
               </div>
               <div class="col-md-3">
                 <label for="validationDefault04" class="form-label">Estado</label>
-                <select class="form-select" id="inptEstado" required>
+                <select class="form-select" name="estado" id="inptEstado" required>
                   <option selected disabled value="">Escolha...</option>
                   <option>Alagoas</option>
                   <option>Sergipe</option>
@@ -118,26 +120,26 @@
              
               <div class="mb-3">
                   <label for="formFile" class="form-label" >Escolha sua foto</label>
-                  <input class="form-control" type="file" id="fotoFile" >
+                  <input class="form-control" name='foto' type="file" id="fotoFile" >
                   </div>
 
                   <div class="row mb-3">
                       <label for="inputEmail3" class="form-label">Email</label>
                       <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail">
+                        <input type="email" class="form-control" name='email' id="inputEmail">
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="inputPassword3" class="form-label">Senha</label>
                       <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword"   minlength="8">
+                        <input type="password" class="form-control" id="inputPassword"  name="senha" minlength="8">
                       </div>
                     </div>
                     <fieldset class="row mb-3">
                       <legend class="form-label">Você é:</legend>
                       <div class="col-sm-10">
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="rdEstudante" value="estudante" checked>
+                          <input class="form-check-input" type="radio" name="convenio" id="rdEstudante" value="estudante" checked>
                           <label class="form-check-label" for="rdEstudante">
                             Estudante
                           </label>
@@ -165,9 +167,10 @@
                       </div>
                     </div>
               <div class="col-12">
-                <button class="btn btn-primary" type="" onclick="cadastrarUser()"><a style="text-decoration: none; color: rgb(255, 255, 255);">Cadastrar</a></button>
+                <button class="btn btn-primary" type="submit"><a style="text-decoration: none; color: rgb(255, 255, 255);">Cadastrar</a></button>
               </div>
-          
+                
+            </form>
             </div>
               <div class="col 4" style="display: flex; justify-content: center; align-items: center; margin-bottom: 650px;">
                 <img src="./img/formulario.png" alt="" srcset="">

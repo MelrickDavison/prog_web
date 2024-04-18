@@ -25,7 +25,7 @@ if((document.getElementById("rdEstudante")).checked){
 
 let user = new Usuario(nome.value, sobrenome.value, userName.value, cidade.value, estado.value, foto.value, email.value, senha.value, convenio)
 setItemLocal(user)
-limparCampos()
+//limparCampos()
 //setURL(user)
 }
 
