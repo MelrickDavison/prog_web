@@ -4,11 +4,16 @@ const app = express();
 const port = 3000; // Porta que o servidor vai rodar
 
 app.use(express.json()) //Preparação pro express ler json - via json
-app.use(express.urlencoded) //Preparação pro express ler urlencoded - via formulário
+//app.use(express.urlencoded()) //Preparação pro express ler urlencoded - via formulário
+app.use(express.urlencoded({ extended: true }))
 
-/
+
 
 app.get('/', (req, res) => {
+  res.send('Hello World! Formandos 2025');
+});
+
+app.get('/form', (req, res) => {
   res.send('Hello World! Formandos 2025');
 });
 
@@ -21,9 +26,15 @@ app.post('/', function(req, res){ //req => Recupera o que enviou (Requisição) 
 */
 
 //Rota
-app.post('/salvar', (req, res) => {
-  let nome = req.body.nome
-  res.send(`Olá ${nome}`);
+app.post('/form', (req, res) => {
+  let estudante = req.body.nome
+ res.send(`Você é ${estudante}`);
+ console.log(estudante)
+});
+
+app.post('/salvar/idade', (req, res) => {
+  let idade = req.body.idade
+  res.send(`Tenho ${idade} anos`);
 });
 
 app.listen(port, () => {
